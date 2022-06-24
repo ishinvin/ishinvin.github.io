@@ -12,6 +12,9 @@
             color: #2d3436;
             padding: 50px;
         }
+        .hello {
+            font-size: 2.5em;
+        }
         .typewrite {
             text-decoration: none;
             color: #b2bec3;
@@ -25,10 +28,22 @@
         .contact {
             padding-top: 100px;
         }
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 50px 20px;
+            }
+            .typewrite {
+                font-size: 0.6em;
+            }
+            .content {
+                font-size: 0.6em;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1><span style="font-size: 2.5em;">Hello.</span> <span>I'm Ishin Vin</span></h1>
+    <h1><span class="hello">Hello.</span></h1>
+    <h1><span>I'm Ishin Vin</span></h1>
     <h3>
         <a href="" class="typewrite" data-period="2000" data-type='[ "Software Developer in Cambodia" ]'>
             <span class="wrap"></span>
