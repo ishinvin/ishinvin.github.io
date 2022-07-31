@@ -42,34 +42,9 @@
                 text-align: center;
             }
         }
-        #overlay {
-            position: fixed;
-            display: none;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0,0,0,0.9);
-            z-index: 2;
-            cursor: pointer;
-        }
-        #text{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            font-size: 50px;
-            color: white;
-            transform: translate(-50%,-50%);
-            -ms-transform: translate(-50%,-50%);
-        }
     </style>
 </head>
 <body>
-    <div id="overlay" onclick="off()">
-        <div id="text">Hi, I'm Ishin</div>
-    </div>
     <h1><span class="ishin">Ishin Vin</span></h1>
     <h3>
         <a href="" class="typewrite" data-period="2000" data-type='[ "Software Developer in Cambodia" ]'>
@@ -88,19 +63,8 @@
         <span><a href="https://www.linkedin.com/in/ishin-vin/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=LinkedIn&logoColor=white" alt="LinkedIn" /></a></span>
         <span><a href="https://twitter.com/ishin_v" target="_blank"><img src="https://img.shields.io/badge/-Twitter-1DA1F2?style=flat&logo=Twitter&logoColor=white" alt="Twitter" /></a></span>
     </div>
-    <audio id="my-audio" loop>
-        <source src="https://ishinvin.github.io/assets/my-life-is-going-on.mp3" type="audio/mp3">
-    </audio>
 </body>
 <script>
-    function on() {
-        document.getElementById("overlay").style.display = "block";
-    }
-
-    function off() {
-        document.getElementById("overlay").style.display = "none";
-        document.getElementById("my-audio").play();
-    }
     var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
@@ -143,8 +107,6 @@
     };
 
     window.onload = function() {
-        on();
-
         var elements = document.getElementsByClassName('typewrite');
         for (var i=0; i<elements.length; i++) {
             var toRotate = elements[i].getAttribute('data-type');
