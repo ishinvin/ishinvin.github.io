@@ -17,13 +17,16 @@
         }
         .typewrite {
             text-decoration: none;
-            color: #b2bec3;
+            color: #191970;
         }
         .content {
             font-family: "Rubik";
             font-size: 1.3em;
             padding-top: 24px;
-            color: #636e72;
+            color: #333333;
+        }
+        .content a {
+            color: #DC143C;
         }
         .contact {
             padding-top: 100px;
@@ -42,6 +45,20 @@
                 text-align: center;
             }
         }
+
+        /* Styles for dark mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #333333;
+                color: #ffffff;
+            }
+            .content {
+                color: #CCCCCC;
+            }
+            .typewrite {
+                color: #ADD8E6;
+            }
+        }
     </style>
 </head>
 <body>
@@ -54,7 +71,7 @@
     <div class="content">
         <p>I'm a software developer based in Phnom Penh, Cambodia.</p>
         <p>Currently, I work as a Senior Software Engineer @<a href="https://github.com/soramitsukhmer" target="_blank">Soramitsu Khmer</a>.</p>
-        <p>Mostly, I work with Java, Spring Boot, Node.js, Vue.js, and TypeScript.</p>
+        <p>Mostly, I work with Java, Spring Boot, Node.js and Vue.js</p>
         <p>I'm currently interested in Amazon Web Services(AWS).</p>
         <p>Apart from coding, I like playing soccer and listening to music.</p>
     </div>
